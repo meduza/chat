@@ -9,6 +9,9 @@ export default class extends Controller {
     channel.on('shout', (payload) => {
       this.insertMessage(payload)
     })
+    channel.on('error', (error) => {
+      alert(error.reason)
+    })
   }
 
   sendMessage(event) {
@@ -25,7 +28,9 @@ export default class extends Controller {
   insertMessage({name, message}) {
     const element = this.messageListTarget
     element.innerHTML += `<div class="chatContainer_messageList_message">
-                            <h5 class="chatContainer_messageList_message_name">${name}</h5>
+                            <h5 class="chatContainer_messageList_message_name">
+                              ${name}
+                            </h5>
                             <div class="chatContainer_messageList_message_body">
                               ${message}
                             </div>
