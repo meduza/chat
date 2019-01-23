@@ -29,9 +29,9 @@ module.exports = (env, options) => ({
         }
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      }
+        test: /\.styl$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader']
+      },
     ]
   },
   plugins: [

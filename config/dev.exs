@@ -49,7 +49,7 @@ config :chat, ChatWeb.Endpoint,
 config :chat, ChatWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+      ~r{priv/static/.*(js|css|styl|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/chat_web/views/.*(ex)$},
       ~r{lib/chat_web/templates/.*(eex)$}
