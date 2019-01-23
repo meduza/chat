@@ -1,2 +1,13 @@
-<div data-controller="chat">
+<div data-controller="chat" class="chatContainer">
+  <div class="chatContainer_messageList" data-target="chat.messageList">
+    <!-- <div class="chatContainer_messageList_message">
+      <h4 class="chatContainer_messageList_message_name">Иван Петров</h4>
+      <div class="chatContainer_messageList_message_body">
+        Сообщение от ивана
+      </div>
+    </div> -->
+  </div>
+  <div class="chatContainer_messageForm">
+    <%= render ChatWeb.PageView, "_form.html", assigns %>
+  </div>
 </div>

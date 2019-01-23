@@ -3,7 +3,6 @@
 // its own CSS file.
 import css from "../css/app.styl"
 import "phoenix_html"
-import socket from "./socket"
 
 // Stimulus.js
 import { Application } from "stimulus"

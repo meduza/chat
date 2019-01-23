@@ -1,0 +1,3 @@
+<input type="text" data-target="chat.nameInput" placeholder="Имя" class="nameInput">
+<input type="text" data-target="chat.messageInput" placeholder="Cообщение...">
+<input type="submit" data-action="click->chat#sendMessage" value="&rarr;">
