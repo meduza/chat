@@ -20,8 +20,8 @@ defmodule ChatWeb.RoomChannel do
   # It is also common to receive messages from the client and
   # broadcast to everyone in the current topic (room:main).
   def handle_in("shout", payload, socket) do
-    with {:ok, _message} <- Messages.create_message(payload) do
-      broadcast socket, "shout", payload
+    with {:ok, message} <- Messages.create_message(payload) do
+      broadcast socket, "shout", %{"name" => message.name, "message" => message.message}
     else
       {:error, _error} ->
          push(socket, "error", %{"reason" => "Name or message can't be blank"})
